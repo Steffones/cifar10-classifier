@@ -4,6 +4,9 @@ Streamlit app for CIFAR-10 classification
 
 import sys
 import os
+from src.config import *
+from src.data_loader import preprocess_single_image
+
 
 # Add parent directory to path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -16,8 +19,6 @@ from tensorflow import keras
 import matplotlib.pyplot as plt
 import pandas as pd
 
-from src.config import *
-from src.data_loader import preprocess_single_image
 
 # Page configuration
 st.set_page_config(

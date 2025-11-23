@@ -1,0 +1,26 @@
+
+======================================================================
+EVALUATION SUMMARY
+======================================================================
+Model Path                    : models/mobilenetv2_cifar10.h5
+Model Name                    : MobileNetV2_CIFAR10
+Model Size (MB)               : 12.78
+Total Parameters              : 2,594,634
+Test Samples                  : 10,000
+Overall Accuracy              : 0.4823
+Average Precision             : 0.4736
+Average Recall                : 0.4823
+Average F1-Score              : 0.4744
+Weighted Precision            : 0.4736
+Weighted Recall               : 0.4823
+Weighted F1-Score             : 0.4744
+Best Class                    : ship
+Best Class Accuracy           : 0.6410
+Worst Class                   : cat
+Worst Class Accuracy          : 0.1790
+Test loss                     : 1.5521
+Test accuracy                 : 0.4823
+Test top_3_accuracy           : 0.7865
+Test precision                : 0.7447
+Test recall                   : 0.1791
+======================================================================

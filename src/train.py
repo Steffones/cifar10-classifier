@@ -58,7 +58,7 @@ def print_system_info():
     print("SYSTEM INFORMATION")
     print("="*70)
     print(f"TensorFlow version: {tf.__version__}")
-    print(f"Keras version: {keras.__version__}")
+    #print(f"Keras version: {keras.__version__}")
     print(f"Python version: {sys.version.split()[0]}")
     
     # GPU information

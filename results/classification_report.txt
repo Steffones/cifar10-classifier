@@ -1,0 +1,23 @@
+CIFAR-10 Classification Report
+======================================================================
+
+Model: models/mobilenetv2_cifar10.h5
+Model Size: 12.78 MB
+Test Samples: 10000
+
+              precision    recall  f1-score   support
+
+    airplane     0.5352    0.4940    0.5138      1000
+  automobile     0.5326    0.6380    0.5805      1000
+        bird     0.3401    0.3340    0.3370      1000
+         cat     0.3340    0.1790    0.2331      1000
+        deer     0.3963    0.4450    0.4192      1000
+         dog     0.4384    0.4090    0.4232      1000
+        frog     0.5397    0.6120    0.5736      1000
+       horse     0.4941    0.5490    0.5201      1000
+        ship     0.5946    0.6410    0.6169      1000
+       truck     0.5316    0.5220    0.5267      1000
+
+    accuracy                         0.4823     10000
+   macro avg     0.4736    0.4823    0.4744     10000
+weighted avg     0.4736    0.4823    0.4744     10000
