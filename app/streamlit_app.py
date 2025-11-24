@@ -4,12 +4,14 @@ Streamlit app for CIFAR-10 classification
 
 import sys
 import os
-from src.config import *
-from src.data_loader import preprocess_single_image
 
 
 # Add parent directory to path
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+#sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
+
 
 import streamlit as st
 import numpy as np
@@ -18,6 +20,8 @@ import tensorflow as tf
 from tensorflow import keras
 import matplotlib.pyplot as plt
 import pandas as pd
+from src.config import *
+from src.data_loader import preprocess_single_image
 
 
 # Page configuration
@@ -152,10 +156,10 @@ def main():
         if uploaded_file is not None:
             # Display uploaded image
             image = Image.open(uploaded_file)
-            st.image(image, caption="Uploaded Image", use_container_width=True)
+            st.image(image, caption="Uploaded Image")
             
             # Predict button
-            if st.button("🔍 Classify Image", type="primary", use_container_width=True):
+            if st.button("🔍 Classify Image", type="primary"):
                 with st.spinner("Analyzing image..."):
                     predicted_class, confidence, all_predictions = predict_image(model, image)
                 
@@ -199,7 +203,7 @@ def main():
                 'Confidence (%)': top_confidences
             })
             
-            st.dataframe(df, use_container_width=True, hide_index=True)
+            st.dataframe(df, hide_index=True)
             
             # Bar chart of all predictions
             st.subheader("All Class Probabilities")

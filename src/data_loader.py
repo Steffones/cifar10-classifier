@@ -6,10 +6,10 @@ Uses tf.data.Dataset API for optimal RAM utilization and performance
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
-from config import *
+from .config import *
 
 def load_cifar10_data():
-    """
+    """use_container_width
     Load CIFAR-10 dataset from Keras datasets
     
     Returns:
